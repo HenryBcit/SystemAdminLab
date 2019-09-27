@@ -27,7 +27,7 @@
 		<a class='move' href="noah.html">Noah</a>
     <a href="Rocky.html">Rocky</a>
 		<script>
-			var els = document.getElementByClassNames("move");
+			var els = document.getElementsByClassName("move");
 			setInterval(()=>{
 				for(var i = 0; i<els.length; i++){
 					els[i].style.left = Math.round(Math.random()*window.innerWidth)+"px";
