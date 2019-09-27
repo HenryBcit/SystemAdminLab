@@ -2,16 +2,33 @@
 <html>
 	<head>
 		<title>Hi INDEX</title>
+		<style>
+			* {
+				position:absolute;
+				left:0;
+				top:0;
+				transition:left 1s, top 1s;
+			}
+		</style>
 	<head>
 	<body>
-		Hi My App
-		<h3>What's going on</h3>
-		<div>
+		<div class='move'>Hi My App</div>
+		<h3 class='move'>What's going on</h3>
+		<div class='move'>
 			Hey hey hey
 		</div>
-		<a href="about.html">About</a>
-		<a href="henry.html">Henry</a>
-		<a href="sahil.html">Sahil</a>
-		<a href="noah.html">Noah</a>
+		<a class='move' href="about.html">About</a>
+		<a class='move' href="henry.html">Henry</a>
+		<a class='move' href="sahil.html">Sahil</a>
+		<a class='move' href="noah.html">Noah</a>
+		<script>
+			var els = document.getElementByClassNames("move");
+			setInterval(()=>{
+				for(var i = 0; i<els.length; i++){
+					els[i].style.left = Math.round(Math.random()*window.innerWidth)+"px";
+					els[i].style.top = Math.round(Math.random()*window.innerHeight)+"px";
+				}
+			}, 1000);
+		</script>
 	</body>
 </html>
